@@ -1,29 +1,34 @@
-% rebase('layout.tpl', title='Home Page', year=year)
-
-<div class="jumbotron">
-    <h1>Bottle</h1>
-    <p class="lead">Bottle is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://bottlepy.org/docs/dev/index.html" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+﻿<div class="jumbotron">
+    <h1>Добро пожаловать в мир криптовалют!</h1>
+    <p class="lead">
+        Криптовалюты — это цифровые активы, которые используют криптографию для обеспечения безопасности и децентрализации.
+        Узнайте больше о Bitcoin, Ethereum и других криптовалютах, а также о технологии блокчейн.
+    </p>
+    <p><a href="/about" class="btn btn-primary btn-large">Узнать больше &raquo;</a></p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Bitcoin (BTC)</h2>
         <p>
-            Bottle gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Bitcoin — первая и самая известная криптовалюта, созданная Сатоши Накамото в 2009 году.
+            Она используется для безопасных и анонимных транзакций по всему миру.
         </p>
-        <p><a class="btn btn-default" href="http://bottlepy.org/docs/dev/index.html">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="https://bitcoin.org/">Узнать больше &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
+        <h2>Ethereum (ETH)</h2>
+        <p>
+            Ethereum — это платформа для создания децентрализованных приложений (dApps) и смарт-контрактов.
+            Её криптовалюта называется Ether.
+        </p>
+        <p><a class="btn btn-default" href="https://ethereum.org/">Узнать больше &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Microsoft Azure</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+        <h2>Технология блокчейн</h2>
+        <p>
+            Блокчейн — это технология, лежащая в основе криптовалют. Она обеспечивает прозрачность, безопасность и децентрализацию.
+        </p>
+        <p><a class="btn btn-default" href="https://en.wikipedia.org/wiki/Blockchain">Узнать больше &raquo;</a></p>
     </div>
 </div>
