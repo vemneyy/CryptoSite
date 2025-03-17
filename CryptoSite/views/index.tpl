@@ -3,74 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <title>CryptoWorld – Мир криптовалют</title>
-  <!-- Подключение Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Подключение шрифтов для крипто-стиля -->
-  <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700|Poppins:400,700" rel="stylesheet">
-  <!-- Подключение Font Awesome для крипто-иконок -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Bootstrap 4 CSS CDN -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-GTVVZkzjURh+EO+1fvYfhb/iDZGiHMTQ2O6VB8Qn44O+h6lcbQWJpE9jL0WwH8wh"
+    crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700|Poppins:400,700|Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
-    /* Общие стили */
+    /* Сброс отступов у body, чтобы navbar мог занимать всю ширину */
     body {
+      margin: 0;
+      padding: 0;
       background-color: #0d0d0d;
       color: #e0e0e0;
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Share Tech Mono', monospace;
       overflow-x: hidden;
-      padding: 20px;
-    }
-    
-    /* Центрирование контейнера с дополнительными отступами */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    /* Универсальный класс для отступов контента */
-    .content-padding {
-      padding-left: 20px;
-      padding-right: 20px;
+      font-size: 18px;
     }
 
-    /* Анимация градиентного фона */
+    /* CSS-исправления для navbar */
+.navbar {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.navbar-brand {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #f0b90b !important;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  color: #e0e0e0 !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d4a20a !important;
+}
+
+
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+    /* Jumbotron – градиент */
     @keyframes gradientBG {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    
-    /* Jumbotron – более мягкий, перламутровый вид */
     .jumbotron {
-      background: linear-gradient(135deg, #2c3e50, #bdc3c7, #2c3e50);
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
       background-size: 400% 400%;
       animation: gradientBG 12s ease infinite;
-      color: #f0b90b;
+      color: #ffffff;
       border-radius: 20px;
-      box-shadow: 0 0 25px rgba(240,185,11,0.6);
+      box-shadow: 0 0 25px rgba(253,187,45,0.6);
       padding: 60px 80px;
       margin-bottom: 40px;
       position: relative;
       overflow: hidden;
-      /* Ensure text remains left aligned */
       text-align: left;
     }
-    
     .jumbotron h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 4em;
       margin-bottom: 20px;
-      text-shadow: 0 0 12px rgba(240,185,11,0.75);
+      text-shadow: 0 0 12px rgba(253,187,45,0.75);
     }
-    
     .jumbotron p.lead {
       font-size: 1.4em;
       font-weight: 300;
       line-height: 1.6;
     }
-    
-    /* Миссия сайта с улучшенными отступами и мягкой анимацией */
+
+    /* Миссия сайта */
     .mission {
       background: linear-gradient(135deg, #1f3c70, #4a6572, #1f3c70);
       background-size: 300% 300%;
@@ -78,93 +103,101 @@
       border-radius: 20px;
       padding: 40px 60px;
       margin: 40px 0;
-      box-shadow: 0 0 20px rgba(240,185,11,0.5);
+      box-shadow: 0 0 20px rgba(253,187,45,0.5);
     }
-    
     .mission h2 {
       font-family: 'Orbitron', sans-serif;
       font-size: 2.8em;
       color: #f0b90b;
-      text-shadow: 0 0 8px rgba(240,185,11,0.8);
+      text-shadow: 0 0 8px rgba(253,187,45,0.8);
       margin-bottom: 20px;
     }
-    
     .mission p {
       font-size: 1.2em;
       line-height: 1.7;
       text-align: justify;
     }
-    
-    /* Заголовки с иконками и анимацией */
+
+    /* Заголовки */
     h2 {
       font-family: 'Orbitron', sans-serif;
       color: #f0b90b;
-      text-shadow: 0 0 6px rgba(240,185,11,0.8);
+      text-shadow: 0 0 6px rgba(253,187,45,0.8);
       margin-top: 0;
       transition: transform 0.3s ease;
     }
     h2:hover {
       transform: scale(1.05);
     }
+
+    /* "Матрица-эффект" при наведении на названия криптовалют */
+    .crypto-title {
+      position: relative;
+      cursor: pointer;
+      transition: color 0.5s ease, text-shadow 0.5s ease;
+    }
+    .crypto-title:hover {
+      animation: flicker 1.5s infinite alternate;
+    }
+    @keyframes flicker {
+      0%   { color: #f0b90b; text-shadow: 0 0 8px #f0b90b; }
+      50%  { color: #00ff00; text-shadow: 0 0 6px #00ff00; }
+      100% { color: #00ff00; text-shadow: 0 0 15px #00ff00; }
+    }
     
-    /* Кнопки – мягкие тени и переходы */
-    .btn-primary {
-      background-color: #f0b90b;
-      border-color: #f0b90b;
-      color: #121212;
+    /* Трехмерные кнопки */
+    .btn-primary, .btn-default {
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
       font-weight: 700;
-      transition: box-shadow 0.3s ease;
+      border: none;
+    }
+    .btn-primary {
+      background: linear-gradient(45deg, #f0b90b, #d4a20a);
+      color: #121212;
     }
     .btn-primary:hover,
     .btn-primary:focus {
-      background-color: #d4a20a;
-      border-color: #d4a20a;
-      box-shadow: 0 0 12px rgba(240,185,11,0.6);
+      background: linear-gradient(45deg, #ffd131, #e1aa07);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+      transform: translateY(-2px);
     }
-    
     .btn-default {
       background-color: #1a1a2e;
-      border-color: #444;
       color: #f0b90b;
-      transition: all 0.3s ease;
     }
     .btn-default:hover,
     .btn-default:focus {
       background-color: #16213e;
-      border-color: #555;
-      color: #f0b90b;
-      box-shadow: 0 0 8px rgba(240,185,11,0.5);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+      transform: translateY(-2px);
     }
     
-    /* Ссылки */
-    a {
-      color: #f0b90b;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-    a:hover {
-      color: #d4a20a;
-    }
-    
-    /* Анимация для колонок с отступами */
-    .col-md-4 {
-      margin-bottom: 30px;
-      transition: transform 0.3s ease;
-      padding: 0 15px;
-    }
-    .col-md-4:hover {
-      transform: translateY(-5px);
+    /* Уменьшенный уголок в левом верхнем углу (делаем более незаметным) */
+    .btn-primary::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background: rgba(255,255,255,0.3);
+      border-top-left-radius: 8px;
+      z-index: 1;
     }
     
     /* Декоративный разделитель */
     hr.custom-hr {
       border: 0;
       height: 1px;
-      background: linear-gradient(to right, rgba(240,185,11,0), rgba(240,185,11,0.7), rgba(240,185,11,0));
+      background: linear-gradient(to right, rgba(253,187,45,0), rgba(253,187,45,0.7), rgba(253,187,45,0));
       margin: 30px 0;
     }
     
-    /* Футер с мягкой анимацией линии */
+    /* Футер */
     footer {
       background-color: #1a1a2e;
       color: #f0b90b;
@@ -172,7 +205,7 @@
       text-align: center;
       margin-top: 40px;
       position: relative;
-      border-top: 1px solid rgba(240,185,11,0.3);
+      border-top: 1px solid rgba(253,187,45,0.3);
     }
     footer:before {
       content: "";
@@ -181,7 +214,7 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background: linear-gradient(90deg, rgba(240,185,11,0) 0%, rgba(240,185,11,0.8) 50%, rgba(240,185,11,0) 100%);
+      background: linear-gradient(90deg, rgba(253,187,45,0) 0%, rgba(253,187,45,0.8) 50%, rgba(253,187,45,0) 100%);
       animation: animateFooterLine 3s linear infinite;
     }
     @keyframes animateFooterLine {
@@ -189,18 +222,11 @@
       50% { background-position: 100% 0; }
       100% { background-position: 0% 0; }
     }
-    
-    /* Навигация (если потребуется) */
-    .navbar-nav > li > a {
-      transition: color 0.2s ease;
-    }
-    .navbar-nav > li > a:hover {
-      color: #d4a20a !important;
-    }
   </style>
 </head>
 <body>
-  <div class="container content-padding">
+  <!-- Основной контейнер для контента (с отступами) -->
+  <div class="main-container">
     <!-- Главный блок приветствия -->
     <div class="jumbotron">
       <h1><i class="fas fa-coins"></i> Добро пожаловать в CryptoWorld!</h1>
@@ -212,7 +238,7 @@
     </div>
 
     <!-- Блок с миссией сайта -->
-    <div class="mission content-padding">
+    <div class="mission">
       <h2><i class="fas fa-bullseye"></i> Наша миссия</h2>
       <p>
         CryptoWorld создан для того, чтобы предоставить самую актуальную, подробную и достоверную информацию о криптовалютах и технологии блокчейн.
@@ -226,7 +252,7 @@
     <!-- Информационные блоки по криптовалютам и технологии -->
     <div class="row">
       <div class="col-md-4 text-left">
-        <h2><i class="fab fa-bitcoin"></i> Bitcoin (BTC)</h2>
+        <h2 class="crypto-title"><i class="fab fa-bitcoin"></i> Bitcoin (BTC)</h2>
         <p>
           Bitcoin – первая криптовалюта, созданная Сатоши Накамото в 2009 году. Он символизирует децентрализацию и цифровую свободу,
           предоставляя возможность безопасных транзакций по всему миру.
@@ -234,7 +260,7 @@
         <p><a class="btn btn-default" href="https://bitcoin.org/">Узнать больше &raquo;</a></p>
       </div>
       <div class="col-md-4 text-left">
-        <h2><i class="fab fa-ethereum"></i> Ethereum (ETH)</h2>
+        <h2 class="crypto-title"><i class="fab fa-ethereum"></i> Ethereum (ETH)</h2>
         <p>
           Ethereum – платформа для создания смарт-контрактов и децентрализованных приложений. Его криптовалюта Ether лежит в основе экосистемы,
           открывая безграничные возможности для инноваций.
@@ -242,7 +268,7 @@
         <p><a class="btn btn-default" href="https://ethereum.org/">Узнать больше &raquo;</a></p>
       </div>
       <div class="col-md-4 text-left">
-        <h2><i class="fas fa-link"></i> Блокчейн</h2>
+        <h2 class="crypto-title"><i class="fas fa-link"></i> Блокчейн</h2>
         <p>
           Технология блокчейн обеспечивает прозрачность, безопасность и децентрализацию, являясь фундаментом для всех криптовалют.
           Она открывает новые горизонты для бизнеса, финансов и государственного управления.
@@ -254,7 +280,7 @@
     <hr class="custom-hr">
 
     <!-- Раздел "Часто задаваемые вопросы" -->
-    <div class="row content-padding">
+    <div class="row">
       <div class="col-md-12">
         <h2>Часто задаваемые вопросы</h2>
         <p style="text-align: justify;">
@@ -278,7 +304,7 @@
     <hr class="custom-hr">
 
     <!-- Дополнительный раздел "Crypto Insights" -->
-    <div class="row content-padding">
+    <div class="row">
       <div class="col-md-12">
         <h2><i class="fas fa-chart-line"></i> Crypto Insights</h2>
         <p style="text-align: justify;">
@@ -291,13 +317,14 @@
 
   <!-- Футер -->
   <footer>
-    <div class="container content-padding">
-      <p>© 2025 CryptoWorld. Все права защищены.</p>
+    <div class="main-container">
+      <p>© 2025 SapkatBesvol & CO. Все права защищены.</p>
       <p>Следите за обновлениями и будьте в курсе последних новостей о криптовалюте.</p>
     </div>
   </footer>
 
-  <!-- Подключение Bootstrap JS -->
+  <!-- Подключение jQuery и Bootstrap JS (пример для Bootstrap 4) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
