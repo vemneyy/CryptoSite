@@ -232,3 +232,7 @@ footer {
         background-position: 0% 0;
     }
 }
+
+.jumbotron, .row, .news-section, .how-it-works, .featured-cryptos {
+    margin-bottom: 60px; 
+}
