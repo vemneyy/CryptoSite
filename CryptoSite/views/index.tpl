@@ -1,125 +1,64 @@
-﻿<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>CryptoWorld – Мир криптовалют</title>
-  <!-- Bootstrap 4 CSS CDN -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-GTVVZkzjURh+EO+1fvYfhb/iDZGiHMTQ2O6VB8Qn44O+h6lcbQWJpE9jL0WwH8wh"
-    crossorigin="anonymous">
+% rebase('layout.tpl', title='Главная', year=year)
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700|Poppins:400,700|Share+Tech+Mono&display=swap" rel="stylesheet">
+<div class="jumbotron">
+    <h1>CryptoWorld</h1>
+    <p class="lead">Криптовалюта - это революционный цифровой актив, который позволяет осуществлять одноранговые транзакции без необходимости в центральном органе.</p>
+    <p><a href="{{ coindesk }}" class="btn btn-primary btn-large">Узнать больше &raquo;</a></p>
+</div>
 
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="static/content/styles.css">
-</head>
-<body>
-  <!-- Основной контейнер для контента (с отступами) -->
-  <div class="main-container">
-    <!-- Главный блок приветствия -->
-    <div class="jumbotron">
-      <h1><i class="fas fa-coins"></i> Добро пожаловать в CryptoWorld!</h1>
-      <p class="lead">
-        Мир криптовалют – пространство инноваций, технологий и финансовой свободы. Здесь вы узнаете о Bitcoin, Ethereum, блокчейне и других цифровых активах,
-        которые меняют мировую экономику.
-      </p>
-      <p><a href="/about" class="btn btn-primary btn-lg">Узнать больше &raquo;</a></p>
-    </div>
-
-    <!-- Блок с миссией сайта -->
-    <div class="mission">
-      <h2><i class="fas fa-bullseye"></i> Наша миссия</h2>
-      <p>
-        CryptoWorld создан для того, чтобы предоставить самую актуальную, подробную и достоверную информацию о криптовалютах и технологии блокчейн.
-        Мы стремимся обучать, вдохновлять и объединять сообщество энтузиастов, инвесторов и разработчиков, способствуя прозрачности и безопасности
-        в мире цифровых финансов. Наша цель – помочь каждому найти свое место в новой экономике, основанной на децентрализации и технологическом прогрессе.
-      </p>
-    </div>
-
-    <hr class="custom-hr">
-
-    <!-- Информационные блоки по криптовалютам и технологии -->
-    <div class="row">
-      <div class="col-md-4 text-left">
-        <h2 class="crypto-title"><i class="fab fa-bitcoin"></i> Bitcoin (BTC)</h2>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Как начать работать с криптовалютой</h2>
         <p>
-          Bitcoin – первая криптовалюта, созданная Сатоши Накамото в 2009 году. Он символизирует децентрализацию и цифровую свободу,
-          предоставляя возможность безопасных транзакций по всему миру.
+            Узнайте основы криптовалют, включая то, как покупать, хранить и торговать цифровыми активами безопасно и эффективно.
         </p>
-        <p><a class="btn btn-default" href="https://bitcoin.org/">Узнать больше &raquo;</a></p>
-      </div>
-      <div class="col-md-4 text-left">
-        <h2 class="crypto-title"><i class="fab fa-ethereum"></i> Ethereum (ETH)</h2>
-        <p>
-          Ethereum – платформа для создания смарт-контрактов и децентрализованных приложений. Его криптовалюта Ether лежит в основе экосистемы,
-          открывая безграничные возможности для инноваций.
-        </p>
-        <p><a class="btn btn-default" href="https://ethereum.org/">Узнать больше &raquo;</a></p>
-      </div>
-      <div class="col-md-4 text-left">
-        <h2 class="crypto-title"><i class="fas fa-link"></i> Блокчейн</h2>
-        <p>
-          Технология блокчейн обеспечивает прозрачность, безопасность и децентрализацию, являясь фундаментом для всех криптовалют.
-          Она открывает новые горизонты для бизнеса, финансов и государственного управления.
-        </p>
-        <p><a class="btn btn-default" href="https://ru.wikipedia.org/wiki/Blockchain">Узнать больше &raquo;</a></p>
-      </div>
+        <p><a class="btn btn-default" href="{{ coinbase_learn }}">Узнать больше &raquo;</a></p>
     </div>
-
-    <hr class="custom-hr">
-
-    <!-- Раздел "Часто задаваемые вопросы" -->
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Часто задаваемые вопросы</h2>
-        <p style="text-align: justify;">
-          <strong>Как начать работу с криптовалютами?</strong><br>
-          Начните с изучения основ, выберите надежный кошелек и биржу (например, Binance, Coinbase, EXMO). Обязательно изучите комиссии,
-          условия ввода/вывода и репутацию платформы.
-        </p>
-        <p style="text-align: justify;">
-          <strong>Безопасность криптовалют</strong><br>
-          Благодаря децентрализованной сети и криптографической защите, криптовалюты являются безопасными. Однако, защита ваших средств
-          зависит от правильного выбора кошелька и соблюдения мер безопасности, таких как двухфакторная аутентификация.
-        </p>
-        <p style="text-align: justify;">
-          <strong>Какие перспективы у крипторынка?</strong><br>
-          Крипторынок постоянно развивается. Новые технологии и проекты способствуют финансовым инновациям. CryptoWorld регулярно публикует
-          актуальные новости, аналитику и обзоры, чтобы вы всегда были в курсе последних тенденций.
-        </p>
-      </div>
+    <div class="col-md-4">
+        <h2>Топ криптовалют</h2>
+        <p>Изучите самые популярные и широко используемые криптовалюты, такие как Биткойн, Эфириум и многие другие.</p>
+        <p><a class="btn btn-default" href="{{ coinmarketcap }}">Узнать больше &raquo;</a></p>
     </div>
-
-    <hr class="custom-hr">
-
-    <!-- Дополнительный раздел "Crypto Insights" -->
-    <div class="row">
-      <div class="col-md-12">
-        <h2><i class="fas fa-chart-line"></i> Crypto Insights</h2>
-        <p style="text-align: justify;">
-          Здесь вы найдете свежие аналитические материалы, обзоры инновационных проектов и прогнозы развития цифровых активов.
-          Мы исследуем новые тренды, обсуждаем законодательные изменения и анализируем динамику рынка, чтобы вы всегда были на шаг впереди.
-        </p>
-      </div>
+    <div class="col-md-4">
+        <h2>Кошельки для криптовалют</h2>
+        <p>Узнайте, как безопасно хранить свою криптовалюту с помощью аппаратных кошельков, программных кошельков и других решений.</p>
+        <p><a class="btn btn-default" href="{{ trezor }}">Узнать больше &raquo;</a></p>
     </div>
-  </div>
+</div>
 
-  <!-- Футер -->
-  <footer>
-    <div class="main-container">
-      <p>© 2025 SapkatBesvol & CO. Все права защищены.</p>
-      <p>Следите за обновлениями и будьте в курсе последних новостей о криптовалюте.</p>
+<div class="row news-section">
+    <div class="col-md-12">
+        <h2>Последние новости криптовалют</h2>
+        <p>Будьте в курсе последних тенденций и новостей мира криптовалют. Независимо от того, идет ли речь о рыночном анализе или новых блокчейн-технологиях, мы всегда готовы предоставить актуальную информацию.</p>
+        <p><a class="btn btn-info" href="{{ coindesk }}">Читать последние новости &raquo;</a></p>
     </div>
-  </footer>
+</div>
 
-  <!-- Подключение jQuery и Bootstrap JS (пример для Bootstrap 4) -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+<div class="row how-it-works">
+    <div class="col-md-12">
+        <h2>Как работает криптовалюта</h2>
+        <p>Узнайте основы технологии блокчейн и как криптовалюты добываются, торгуются и хранятся. Откройте для себя, как децентрализованные сети дают возможности людям и исключают необходимость в посредниках.</p>
+        <p><a class="btn btn-success" href="{{ bitcoin_how_it_works }}">Узнать больше &raquo;</a></p>
+    </div>
+</div>
+
+<div class="row featured-cryptos">
+    <div class="col-md-12">
+        <h2>Выделенные криптовалюты</h2>
+        <div class="crypto-item">
+            <h3>Биткойн (BTC)</h3>
+            <p>Биткойн - первая и наиболее широко признанная криптовалюта, выпущенная в 2009 году анонимным лицом или группой под именем Сатоши Накамото.</p>
+            <p><a class="btn btn-warning" href="{{ bitcoin_org }}">Узнать больше &raquo;</a></p>
+        </div>
+        <div class="crypto-item">
+            <h3>Эфириум (ETH)</h3>
+            <p>Эфириум - децентрализованная платформа, на которой работают смарт-контракты, позволяя разработчикам создавать децентрализованные приложения (DApps).</p>
+            <p><a class="btn btn-warning" href="{{ ethereum_org }}">Узнать больше &raquo;</a></p>
+        </div>
+        <div class="crypto-item">
+            <h3>Лайткойн (LTC)</h3>
+            <p>Лайткойн - криптовалюта с пиринговой сетью и открытым исходным кодом, обеспечивающая более быстрые транзакции с использованием другого алгоритма хеширования.</p>
+            <p><a class="btn btn-warning" href="{{ litecoin_org }}">Узнать больше &raquo;</a></p>
+        </div>
+    </div>
+</div>
