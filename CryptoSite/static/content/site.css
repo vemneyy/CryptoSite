@@ -145,19 +145,16 @@ h2 {
     }
 }
 
-.btn-primary, .btn-default {
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
-    font-weight: 700;
-    border: none;
+.btn-primary, .btn-default, .btn-info, .btn-warning, .btn-success {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
 }
 
 .btn-primary {
     background: linear-gradient(45deg, #f0b90b, #d4a20a);
     color: #121212;
+    border: none;
 }
 
     .btn-primary:hover,
@@ -165,31 +162,73 @@ h2 {
         background: linear-gradient(45deg, #ffd131, #e1aa07);
         box-shadow: 0 6px 12px rgba(0,0,0,0.4);
         transform: translateY(-2px);
+        color: #121212;
     }
 
 .btn-default {
     background-color: #1a1a2e;
     color: #f0b90b;
+    border: none;
 }
 
     .btn-default:hover,
     .btn-default:focus {
         background-color: #16213e;
+        color: #f0b90b;
         box-shadow: 0 6px 12px rgba(0,0,0,0.4);
         transform: translateY(-2px);
     }
 
-.btn-primary::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 6px;
-    height: 6px;
-    background: rgba(255,255,255,0.3);
-    border-top-left-radius: 8px;
-    z-index: 1;
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
 }
+
+    .btn-info:hover,
+    .btn-info:focus {
+        background-color: #138496;
+        color: white;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        transform: translateY(-2px);
+    }
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #121212;
+    border: none;
+}
+
+    .btn-warning:hover,
+    .btn-warning:focus {
+        background-color: #e0a800;
+        color: #121212;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        transform: translateY(-2px);
+    }
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+    .btn-success:hover,
+    .btn-success:focus {
+        background-color: #218838;
+        color: white;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        transform: translateY(-2px);
+    }
+
+    .btn-primary:focus,
+    .btn-default:focus,
+    .btn-info:focus,
+    .btn-warning:focus,
+    .btn-success:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(253,187,45,0.5);
+    }
 
 hr.custom-hr {
     border: 0;
