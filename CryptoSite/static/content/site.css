@@ -275,3 +275,45 @@ footer {
 .jumbotron, .row, .news-section, .how-it-works, .featured-cryptos {
     margin-bottom: 60px; 
 }
+
+.news-feed {
+    margin-top: 60px;
+}
+
+.news-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.news-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.news-item h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #f0b90b;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.news-item .btn-info {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+}
+
+    .news-item .btn-info:hover {
+        background-color: #138496;
+    }

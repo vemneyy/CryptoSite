@@ -33,12 +33,11 @@ def contact():
         year=datetime.now().year
     )
 
-@route('/about')
-@view('about')
-def about():
+@route('/news')
+@view('news')
+def news():
     """Renders the about page."""
     return dict(
-        title='About',
-        message='Your application description page.',
+        title='Новости',
         year=datetime.now().year
     )
